@@ -15,7 +15,11 @@
                     </run-dependency>
                 </dependency>
             </module-dependencies>
-            <public-packages/>
+            <public-packages>
+                <package>com.pekinsoft.northwind.utils</package>
+                <package>com.pekinsoft.northwind.utils.enums</package>
+                <package>com.pekinsoft.northwind.utils.exceptions</package>
+            </public-packages>
         </data>
     </configuration>
 </project>
