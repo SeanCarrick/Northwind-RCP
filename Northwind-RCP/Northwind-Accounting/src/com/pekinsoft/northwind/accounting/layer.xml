@@ -24,6 +24,7 @@
                 </file>
             </folder>
             <file name="com-pekinsoft-northwind-accounting-view-CoATopComponent.shadow_hidden"/>
+            <file name="com-pekinsoft-northwind-accounting-view-GLTopComponent.shadow_hidden"/>
         </folder>
     </folder>
     <folder name="Toolbars">

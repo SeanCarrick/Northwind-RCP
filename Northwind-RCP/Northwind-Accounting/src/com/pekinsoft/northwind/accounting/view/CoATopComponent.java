@@ -5,6 +5,11 @@
  */
 package com.pekinsoft.northwind.accounting.view;
 
+//import com.pekinsoft.northwind.utils.Logger;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
@@ -36,12 +41,48 @@ import org.openide.util.NbBundle.Messages;
     "HINT_CoATopComponent=This is the Chart of Accounts"
 })
 public final class CoATopComponent extends TopComponent {
-
+    private final String className = CoATopComponent.class.getName();
+    private final Logger log;
+//    private final ResourceBundle rb = ResourceBundle.getBundle(
+//            "com.pekinsoft.northwind.accounting.view.CoATopComponent");
+    private LogRecord record;
+    
     public CoATopComponent() {
+        Logger.getLogger(className).setLevel(Level.FINE);
+        log = Logger.getLogger(CoATopComponent.class.getName());
+        log.setLevel(Level.FINE);
+        // Get the method name stored in a variable.
+//        String method = "Constructor()";
+        record = new LogRecord(Level.INFO, "Entering constructor.");
+        record.setSourceClassName(className);
+        record.setSourceMethodName("CoATopComponent()");
+        log.log(record);
+        
+        // First, we need to initialize our Logger.
+//        log = new Logger(System.getProperty("user.dir") 
+////                + System.getProperty("file.separator") + ".northwind" 
+//                + System.getProperty("file.separator") + "var" 
+//                + System.getProperty("file.separator") + "log" 
+//                + System.getProperty("file.separator") 
+//                + className + ".log", 
+//                Logger.DEBUG);
+//        log.enter(className, method);
+//        log.debug("Initializing components of " + className + "...");
+        record.setLevel(Level.FINE);
+        record.setMessage("Initializing the components of " + className + "...");
+        log.log(record);
         initComponents();
+        
+//        log.debug("Setting the name and tooltip text...");
+        record.setMessage("Setting the name and tooltip text...");
+        log.log(record);
         setName(Bundle.CTL_CoATopComponent());
         setToolTipText(Bundle.HINT_CoATopComponent());
 
+//        log.exit(className, method);
+        record.setLevel(Level.INFO);
+        record.setMessage("Exiting constructor.");
+        log.log(record);
     }
 
     /**
@@ -52,39 +93,100 @@ public final class CoATopComponent extends TopComponent {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        chartOfAccountsList = new org.openide.explorer.propertysheet.PropertySheet();
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(chartOfAccountsList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(chartOfAccountsList, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.openide.explorer.propertysheet.PropertySheet chartOfAccountsList;
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
+//        String method = "componentOpened";
+//        log.enter(className, method);
+        record = new LogRecord(Level.INFO, "Entering componentOpened.");
+        record.setSourceClassName(className);
+        record.setSourceMethodName("componentOpened()");
+        log.log(record);
+        
         // TODO add custom code on component opening
+
+//        log.exit(className, method);
+        record.setMessage("Exiting componentOpened.");
+        log.log(record);
     }
 
     @Override
     public void componentClosed() {
+//        String method = "componentClosed";
+//        log.enter(className, method);
+        record = new LogRecord(Level.INFO, "Entering componentClosed.");
+        record.setSourceClassName(className);
+        record.setSourceMethodName("componentClosed()");
+        log.log(record);
+        
         // TODO add custom code on component closing
+
+//        log.exit(className, method);
+        record.setMessage("Exiting componentClosed.");
+        log.log(record);
     }
 
     void writeProperties(java.util.Properties p) {
+//        String method = "componentOpened";
+//        log.enter(className, method, p);
+        record = new LogRecord(Level.INFO, "Entering writeProperties.");
+        record.setSourceClassName(className);
+        record.setSourceMethodName("writeProperties(java.util.Properties p)");
+        record.setParameters(new Object[] {p});
+        log.log(record);
+        
         // better to version settings since initial version as advocated at
         // http://wiki.apidesign.org/wiki/PropertyFiles
+        record.setLevel(Level.FINE);
+        record.setMessage("setting the properties...");
+        log.log(record);
         p.setProperty("version", "1.0");
         // TODO store your settings
+
+//        log.exit(className, method);
+        record.setLevel(Level.INFO);
+        record.setMessage("Exiting writeProperties.");
+        log.log(record);
     }
 
     void readProperties(java.util.Properties p) {
+//        String method = "componentOpened";
+//        log.enter(className, method, p);
+        record = new LogRecord(Level.INFO, "Entering readProperties.");
+        record.setSourceClassName(className);
+        record.setSourceMethodName("readProperties(java.util.Properties p)");
+        record.setParameters(new Object[] {p});
+        log.log(record);
+        
+        record.setLevel(Level.FINE);
+        record.setMessage("Retrieving the properties...");
+        log.log(record);
         String version = p.getProperty("version");
         // TODO read your settings according to their version
+
+//        log.exit(className, method);
+        record.setLevel(Level.INFO);
+        record.setMessage("Exiting readProperties.");
+        log.log(record);
     }
 }

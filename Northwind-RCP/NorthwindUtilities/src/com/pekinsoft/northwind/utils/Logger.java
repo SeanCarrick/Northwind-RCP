@@ -91,7 +91,7 @@ public class Logger {
             + FILE_SEPARATOR + "log" 
             + FILE_SEPARATOR + "application.log";    
         TEMP_LOG_PATH = System.getProperty("user.home") 
-            + FILE_SEPARATOR + "is2300.log";    
+            + FILE_SEPARATOR + "northwind.temp.log";    
         ERR_PATH = System.getProperty("user.home") 
             + FILE_SEPARATOR + ".northwind"
             + FILE_SEPARATOR + "var" 
