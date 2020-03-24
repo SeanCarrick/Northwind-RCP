@@ -48,6 +48,8 @@ reported.
 If any of these seven (7) sections do not apply to your specific bug report, please delete them from the bug report and/or change them 
 to a different section that you feel should be included in your report.
 
+Check out this [example bug report...](https://github.com/PekinSOFT-Systems/Northwind-RCP/issues/8)
+
 Provided that you use our [bug report template](https://github.com/PekinSOFT-Systems/Northwind-RCP/issues/new/choose), you will always
 submit **great bug reports**!
 
