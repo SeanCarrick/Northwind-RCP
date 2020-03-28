@@ -1,6 +1,7 @@
 Manifest-Version: 1.0
 AutoUpdate-Show-In-Client: true
 OpenIDE-Module: com.pekinsoft.northwind.accounting
+OpenIDE-Module-Implementation-Version: 1
 OpenIDE-Module-Layer: com/pekinsoft/northwind/accounting/layer.xml
 OpenIDE-Module-Localizing-Bundle: com/pekinsoft/northwind/accounting/Bundle.properties
 OpenIDE-Module-Requires: org.openide.windows.WindowManager

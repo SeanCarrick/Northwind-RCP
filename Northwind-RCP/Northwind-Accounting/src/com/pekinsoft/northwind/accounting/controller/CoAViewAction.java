@@ -23,7 +23,7 @@ import org.openide.util.NbBundle.Messages;
         displayName = "#CTL_CoAViewAction"
 )
 @ActionReferences({
-    @ActionReference(path = "Menu/Window/Optional Tools", position = 3333),
+    @ActionReference(path = "Menu/Window/Optional Tools", position = 10),
     @ActionReference(path = "Shortcuts", name = "WINDOWS F5")
 })
 @Messages("CTL_CoAViewAction=Chart of Accounts")
